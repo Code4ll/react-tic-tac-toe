@@ -7,7 +7,7 @@ type Scores = {
 };
 
 const INTIAL_GAME_STATE = ["", "", "", "", "", "", "", "", ""];
-const INTIAL_SCORES: Scores = { X: 0, O: 0 , D: 0};
+const INTIAL_SCORES: Scores = { X: 0, O: 0, D: 0 };
 const WINNNG_COMBOS = [
 	[0, 1, 2],
 	[3, 4, 5],
@@ -32,9 +32,9 @@ function Game() {
 	}, []);
 
 	useEffect(() => {
-    if (gameState === INTIAL_GAME_STATE) {
-      return
-    }
+		if (gameState === INTIAL_GAME_STATE) {
+			return;
+		}
 		checkForWinner();
 	}, [gameState]);
 
@@ -54,14 +54,13 @@ function Game() {
 		resetBoard();
 	};
 	const handleDraw = () => {
-		window.alert("The game ended in a draw")
+		window.alert("The game ended in a draw");
 
-		const newPlayerScore = scores['D'] + 1;
+		const newPlayerScore = scores["D"] + 1;
 		const newScores = { ...scores };
-		newScores['D'] = newPlayerScore;
+		newScores["D"] = newPlayerScore;
 		setScores(newScores);
 		localStorage.setItem("scores", JSON.stringify(newScores));
-
 
 		resetBoard();
 	};
@@ -101,7 +100,6 @@ function Game() {
 		setCurrentPlayer(currentPlayer === "X" ? "O" : "X");
 	};
 
-
 	const handleCellClick = (event: any) => {
 		const cellIndex = Number(event.target.getAttribute("data-cell-index"));
 
@@ -116,7 +114,7 @@ function Game() {
 	};
 
 	return (
-		<div className="h-fit p-8 text-slate-800 bg-gradient-to-r from-yellow-500 to-pink-400 md:flex flex-col">
+		<div className="h-fit p-8 text-slate-800 bg-cover bg-gradient-to-r from-yellow-500 to-pink-400 md:flex flex-col">
 			<h1 className="text-center text-5xl mb-4 font-display text-white">
 				Tic Tac Toe
 			</h1>
@@ -145,7 +143,6 @@ function Game() {
 				<p className=" text-white mt-5">
 					Total Draw(s): <span>{scores["D"]}</span>
 				</p>
-
 			</div>
 		</div>
 	);
