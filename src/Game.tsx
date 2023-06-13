@@ -116,7 +116,7 @@ function Game() {
 	};
 
 	return (
-		<div className="h-full p-8 text-slate-800 bg-gradient-to-r from-yellow-500 to-pink-400 md:flex flex-col">
+		<div className="h-fit p-8 text-slate-800 bg-gradient-to-r from-yellow-500 to-pink-400 md:flex flex-col">
 			<h1 className="text-center text-5xl mb-4 font-display text-white">
 				Tic Tac Toe
 			</h1>
