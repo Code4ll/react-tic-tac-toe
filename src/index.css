@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-	height: 110%;
+	height: 100%;
 }
 
 body {
@@ -12,9 +12,9 @@ body {
 		"Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", "sans-serif";
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: grayscale;
-	height: 110%;
+	height: 100%;
 }
 
 #root {
-	height: 110%;
+	height: 100%;
 }
